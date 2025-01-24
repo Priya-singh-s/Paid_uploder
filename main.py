@@ -194,7 +194,7 @@ SUBSCRIPTION_FILE = "subscription_data.txt"
 CHANNELS_FILE = "channels_data.json"
 
 # Admin ID
-YOUR_ADMIN_ID = 7168441486
+YOUR_ADMIN_ID = 6026885967
 
 # Function to read subscription data
 def read_subscription_data():
@@ -384,7 +384,7 @@ async def id_command(client, message: Message):
         f"`/add_channel {chat_id}`"
     )
 
-YOUR_ADMIN_ID = 7168441486
+YOUR_ADMIN_ID = 6026885967
 
 # Helper function to check admin privilege
 def is_admin(user_id):
