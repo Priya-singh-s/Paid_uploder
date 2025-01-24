@@ -43,7 +43,7 @@ bot = Client(
 
 API_ID    = os.environ.get("API_ID", "20491966")
 API_HASH  = os.environ.get("API_HASH", "aa1c8f86db7f78fe9bfdd77bb48a5b23")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7540828883:AAFUwUeEuXSOo4ew75u5xzQzX7wZ-GvfIX4") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7349205142:AAEr5JCXvhMIcqWK6v2MAmiSjidtedDUSkQ") 
 
 
 # dont edit api by @its_not_romeo
@@ -128,7 +128,7 @@ async def start_command(bot: Client, message: Message):
         "➠ **Can Extract Videos & PDFs From Your Text File and Upload to Telegram!**\n"
         "➠ **For Guide Use Command /guide 📖**\n\n"
         "➠ **Use /helper Command to Download From TXT File** 📄\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @urban_rider2007🩷"
+        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @Indian_warriors_2004🩷"
     )
 
     # Send the image with caption and buttons
@@ -144,7 +144,7 @@ async def start_command(bot: Client, message: Message):
 
 # Retrieve the cookies file path from the environment variable or set the default path
 COOKIES_FILE_PATH = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
-ADMIN_ID = 7168441486 # Admin ID for restricting the command
+ADMIN_ID = 6026885967 # Admin ID for restricting the command
 
 @bot.on_message(filters.command("cookies") & filters.private)
 async def cookies_handler(client: Client, m: Message):
@@ -228,7 +228,7 @@ def write_channels_data(data):
 # Admin-only decorator
 def admin_only(func):
     async def wrapper(client, message: Message):
-        if message.from_user.id != YOUR_ADMIN_ID:
+        if message.from_user.id != 6026885967:
             await message.reply_text("You are not authorized to use this command.")
             return
         await func(client, message)
@@ -277,11 +277,11 @@ async def remove_user(client, message: Message):
     except ValueError:
         await message.reply_text("Invalid command format. Use: /removeuser <user_id>")
 
-YOUR_ADMIN_ID = 7168441486
+YOUR_ADMIN_ID = 6026885967
 
 # Helper function to check admin privilege
 def is_admin(user_id):
-    return user_id == YOUR_ADMIN_ID
+    return user_id == 6026885967
 
 # Command to show all users (Admin only)
 @bot.on_message(filters.command("users") & filters.private)
@@ -388,7 +388,7 @@ YOUR_ADMIN_ID = 6026885967
 
 # Helper function to check admin privilege
 def is_admin(user_id):
-    return user_id == YOUR_ADMIN_ID
+    return user_id == 6026885967
 
 # Command to show all allowed channels (Admin only)
 @bot.on_message(filters.command("allowed_channels"))
@@ -441,16 +441,16 @@ async def stop_handler(client, message: Message):
 @bot.on_message(filters.command("helper"))
 async def moni_handler(client: Client, m: Message):
     if m.chat.type == "private":
-        user_id = str(m.from_user.id)
+        user_id = m.from_user.id
         subscription_data = read_subscription_data()
-        if not any(user[0] == user_id for user in subscription_data):
+        if not is_admin(user_id):
             await m.reply_text("❌ You are not a premium user. Please upgrade your subscription! 💎")
             return
-    else:
+    """else:
         channels = read_channels_data()
         if str(m.chat.id) not in channels:
-            await m.reply_text("❗ You are not a premium user. Subscribe now for exclusive access! 🚀")
-            return
+            await m.reply_text("❗️ You are not a premium user. Subscribe now for exclusive access! 🚀")
+            return"""
             
     editable = await m.reply_text('𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐀 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐒𝐞𝐧𝐝 𝐇𝐞𝐫𝐞 ⏍')
 
