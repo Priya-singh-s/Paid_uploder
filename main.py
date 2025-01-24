@@ -43,7 +43,7 @@ bot = Client(
 
 API_ID    = os.environ.get("API_ID", "20491966")
 API_HASH  = os.environ.get("API_HASH", "aa1c8f86db7f78fe9bfdd77bb48a5b23")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7589739986:AAEb7DdgtvTsnPsAjDqPsONzhA3atKNXv_o") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7540828883:AAFUwUeEuXSOo4ew75u5xzQzX7wZ-GvfIX4") 
 
 
 # dont edit api by @its_not_romeo
